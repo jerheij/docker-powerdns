@@ -1,3 +1,4 @@
+[![](https://images.microbadger.com/badges/image/jerheij/powerdns.svg)](https://microbadger.com/images/jerheij/powerdns "Get your own image badge on microbadger.com")
 ## Simple PowerDNS container with SQLite3 DB
 
 ### Sources
@@ -29,7 +30,7 @@ volumes:
 ```
 services:
   pdns:
-    image: jerheij/pdns:latest
+    image: jerheij/powerdns:latest
     volumes:
       - ./pdns.db:/pdns.db
 ```

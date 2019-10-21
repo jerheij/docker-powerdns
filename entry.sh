@@ -15,7 +15,6 @@ disable-syslog=yes
 
 local-address=0.0.0.0
 local-port=53
-disable-tcp=no
 
 tcp-control-address=0.0.0.0
 tcp-control-port=53000

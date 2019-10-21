@@ -1,14 +1,12 @@
-FROM centos:7
+FROM centos:latest
 COPY entry.sh /entry.sh
 COPY pdns41_db.sql ./pdns_db.sql
-RUN sed -i 's~enabled=1~enabled=0~g' /etc/yum/pluginconf.d/fastestmirror.conf && \
-    rm -f /var/cache/yum/timedhosts.txt && \
-    yum check-update ; \
-    yum update -y
+RUN dnf check-update ; \
+    dnf update -y
 
-RUN yum install epel-release -y && \
-    yum install pdns pdns-backend-sqlite -y && \
-    yum clean all && \
+RUN dnf install epel-release -y && \
+    dnf install pdns pdns-backend-sqlite -y && \
+    dnf clean all && \
     chmod +x /*.sh
 EXPOSE 53
 ENTRYPOINT ["/entry.sh"]

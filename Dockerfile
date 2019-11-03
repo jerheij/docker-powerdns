@@ -5,7 +5,7 @@ RUN dnf check-update ; \
     dnf update -y
 
 RUN dnf install epel-release -y && \
-    dnf install pdns pdns-backend-sqlite -y && \
+    dnf install pdns pdns-backend-sqlite sqlite -y && \
     dnf clean all && \
     chmod +x /*.sh
 EXPOSE 53

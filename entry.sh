@@ -25,19 +25,21 @@ webserver=no
 version-string=anonymous
 # backend
 launch=gsqlite3
-gsqlite3-database=/pdns.db
+gsqlite3-database=/var/lib/pdns/pdns.db
+gsqlite3-pragma-journal-mode=off
+gsqlite3-pragma-synchronous=0
 # eo backend
 EOF
 
 
-DBCheck=$(test -f /pdns.db || echo "false")
+DBCheck=$(test -f /var/lib/pdns/pdns.db || echo "false")
 
 case $DBCheck in
 
 false)
   echo
   echo "Creating empty database..."
-  cat /pdns_db.sql  | sqlite3 /pdns.db
+  cat /pdns_db.sql  | sqlite3 /var/lib/pdns/pdns.db
 ;;
 
 *)

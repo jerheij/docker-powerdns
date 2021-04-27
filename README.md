@@ -1,4 +1,3 @@
-[![](https://images.microbadger.com/badges/image/jerheij/powerdns.svg)](https://microbadger.com/images/jerheij/powerdns "Get your own image badge on microbadger.com")
 ## Simple PowerDNS container with SQLite3 DB
 
 ### Sources

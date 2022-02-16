@@ -1,7 +1,7 @@
 ## Simple PowerDNS container with SQLite3 DB
 
 ### Sources
-Base image: [centos:latest](https://hub.docker.com/_/centos)  
+Base image: [oraclelinux:8](https://hub.docker.com/_/oraclelinux?tab=description)  
 Software: [PowerDNS](https://www.powerdns.com/)
 
 ### Requirements:
